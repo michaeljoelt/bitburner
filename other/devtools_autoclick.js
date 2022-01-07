@@ -1,4 +1,8 @@
-/* crashes game for some reason ...*/
+/* 
+Name: devtools_autoclick.js
+Last updated: 2022-01-06-2200
+*/
+/* BROKEN - crashes game for some reason ...*/
 
 let loop = true;
 let task = "robstore" 

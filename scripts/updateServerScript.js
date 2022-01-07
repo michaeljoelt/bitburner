@@ -1,7 +1,7 @@
 /** @param {NS} ns **/
 /* 
 Name: updateServerScripts.js 
-Last updated: 2022-01-06-1817
+Last updated: 2022-01-06-2200
 
 Description: 
 - set ups autoHack.js on each purchased server (if they start with "pserv")

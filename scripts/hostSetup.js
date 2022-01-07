@@ -1,7 +1,7 @@
 /** @param {NS} ns **/
 /* 
-script: hostsetup.js
-last updated: 2022-01-05-0128
+Name: hostsetup.js
+Last updated: 2022-01-06-2200
 */
 export async function main(ns) {
 	let host = "home";

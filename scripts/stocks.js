@@ -1,6 +1,9 @@
 /** @param {NS} ns **/
 /* base code credit: pwillia7 with modifications by JKelsey: https://www.reddit.com/r/Bitburner/comments/rkd3mu/stocksns_basic_stock_market_setup/hpmg8b7/*/
-
+/* 
+Name: stocks.js
+Last updated: 2022-01-06-2200
+*/
 export async function main(ns) {
     //*********PARAMS FOR SCRIPT ************//
     var maxSharePer = 0.45                  // maximum percent of a symbol's total stock to buy

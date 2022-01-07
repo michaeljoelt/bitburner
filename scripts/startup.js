@@ -1,7 +1,7 @@
 /** @param {NS} ns **/
 /*
 Name: startup.js 
-Last updated: 2022-01-06-1811
+Last updated: 2022-01-06-2200
 */
 export async function main(ns) {
     let script = "autoHack.js"; //to run early on (targetting joesguns) while purchasing each server

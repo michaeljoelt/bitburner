@@ -1,7 +1,7 @@
 /** @param {NS} ns **/
 /* 
 Name: autoHack.js
-Last updated: 2022-01-02-0215
+Last updated: 2022-01-06-2200
 */
 export async function main(ns) {
 	let moneyThresh = 1000000;

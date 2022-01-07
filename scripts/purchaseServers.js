@@ -1,7 +1,7 @@
 /** @param {NS} ns **/
 /*
 Name: purchaseServers.js 
-Last updated: 2022-01-02-1741
+Last updated: 2022-01-06-2200
 */
 export async function main(ns) {
     let script = "autoHack.js";

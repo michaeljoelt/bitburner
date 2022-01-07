@@ -1,7 +1,7 @@
 /** @param {NS} ns **/
 /*
 Name: recursiveScan.js 
-Last updated: 2022-01-03-0235
+Last updated: 2022-01-06-2200
 
 args -> 
 all = returns all servers (also if you put no argument)
