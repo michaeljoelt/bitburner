@@ -1,7 +1,12 @@
 /** @param {NS} ns **/
 /* 
 Name: updateServerScripts.js 
-Last updated: 2022-01-06-0123
+Last updated: 2022-01-06-1817
+
+Description: 
+- set ups autoHack.js on each purchased server (if they start with "pserv")
+- without arguments, just hacks joesguns. otherwise hacks each argument/server
+- use run startup.js to automatically determine which servers to hack (run updateServerScripts within it)
 */
 export async function main(ns) {
 
