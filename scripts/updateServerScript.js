@@ -19,8 +19,8 @@ export async function main(ns) {
 		let potentialTargets = arg.split(" ");
 		targets = [];
 		for (let i = 0; i < potentialTargets.length; i++) {
-			if (serverExists(potentialTargets[i]) && ns.hasRootAccess(potentialTargets[i]) && (ns.getServerRequiredHackingLevel(potentialTargets[i]) <= ns.getHackingLevel())) {
-				targets.push(servers[i]);
+			if (ns.serverExists(potentialTargets[i]) && ns.hasRootAccess(potentialTargets[i]) && (ns.getServerRequiredHackingLevel(potentialTargets[i]) <= ns.getHackingLevel())) {
+				targets.push(potentialTargets[i]);
 			}
 		}
 	}

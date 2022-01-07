@@ -6,12 +6,13 @@ Last updated: 2022-01-06-2200
 export async function main(ns) {
     let script = "autoHack.js"; //to run early on (targetting joesguns) while purchasing each server
     let postScript = "updateServerScripts.js"; //to run after complete purchases/upgrades
+    let hostScript = "hostSetup.js";
     let targets = [];
-    let earlyGame = true;
-
+    let earlyGame = false;
 
     // Start other scripts
     ns.exec("purchaseServers.js", "home", 1);
+    ns.exec("stocks.js", "home", 1);
 
     // Array of all servers that don't need any ports opened
     // to gain root access. These have 16 GB of RAM
@@ -35,6 +36,7 @@ export async function main(ns) {
         await ns.scp(script, serv);
         ns.nuke(serv);
         ns.exec(script, serv, 6);
+        ns.exec(hostScript, "home", 1, serv);
     }
 
     // Wait until we acquire the "BruteSSH.exe" program
@@ -52,11 +54,11 @@ export async function main(ns) {
         let serv = servers1Port[i];
         //targets.push(serv);
         targets = targets + " " + serv;
-
         await ns.scp(script, serv);
         ns.brutessh(serv);
         ns.nuke(serv);
         ns.exec(script, serv, 12);
+        ns.exec(hostScript, "home", 1, serv);
     }
     ns.exec(postScript, "home", 1, targets);
 
@@ -81,15 +83,14 @@ export async function main(ns) {
         ns.brutessh(serv);
         ns.nuke(serv);
         ns.exec(script, serv, 12);
+        ns.exec(hostScript, "home", 1, serv);
     }
     ns.exec(postScript, "home", 1, targets);
-
 
     // Wait until we acquire the "BruteSSH.exe" program
     while (!ns.fileExists("relaySMTP.exe")) {
         await ns.sleep(60000);
     }
-
 
     // Copy our scripts onto each server that requires 3 port
     if(earlyGame == true){
@@ -120,7 +121,6 @@ export async function main(ns) {
     for (let i = 0; i < servers4Port.length; ++i) {
         let serv = servers4Port[i];
         targets = targets + " " + serv;
-
         await ns.scp(script, serv);
         ns.ftpcrack(serv);
         ns.brutessh(serv);
@@ -132,5 +132,4 @@ export async function main(ns) {
     }
 
     ns.exec(postScript, "home", 1, targets);
-
 }
