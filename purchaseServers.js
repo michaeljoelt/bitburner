@@ -5,12 +5,8 @@ Last updated: 2022-01-02-1741
 */
 export async function main(ns) {
     let script = "autoHack.js";
-    // How much RAM each purchased server will have. In this case, it'll
-    // be 8GB.
+    // start with purchasing servers with 8 ram
     let ram = 8;
- 
-    // Iterator we'll use for our loop
- 
     let purchaseLimit = ns.getPurchasedServerLimit();
     ns.tprint("purchased server limit: " + purchaseLimit);
     let allServers = ns.scan();
