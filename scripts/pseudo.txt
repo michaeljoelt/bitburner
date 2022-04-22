@@ -1,0 +1,8 @@
+setup:
+purchaseHacknets 
+purchaseServers 
+updateServer (whenever server purchased or upgraded - run updateServer on it) updateServers //push hack script to all servers (currently only does personal ones; should do all, and priortize targets to hack. only hack self if not personal server)
+stocks
+
+other scripts:
+autoHack // hack-grow-weaken target
